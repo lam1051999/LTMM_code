@@ -1,7 +1,10 @@
 import additiveCiphers.encrypt as encrypt
 import additiveCiphers.decrypt as decrypt
+import helpers.get_input as get_input
 
-encrypt_input = "we are one xyz"
-decrypt_input = "LTPGTDCTMNO"
-print(encrypt.encrypt(encrypt_input, 15))
-print(decrypt.decrypt(decrypt_input, 15))
+prompt, input_str = get_input.get_input()
+key = 15
+if prompt == 0:
+    print("Encrypted string: ", encrypt.encrypt(input_str, key))
+else:
+    print("Decrypted string: ", decrypt.decrypt(input_str, key))
