@@ -1,4 +1,4 @@
-from helpers import charactermap
+import charactermap
 
 
 def decrypt(input_str, key):

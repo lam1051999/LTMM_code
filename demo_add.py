@@ -1,5 +1,5 @@
-from helpers import encrypt
-from helpers import decrypt
+import additiveCiphers.encrypt as encrypt
+import additiveCiphers.decrypt as decrypt
 
 encrypt_input = "we are one xyz"
 decrypt_input = "LTPGTDCTMNO"
