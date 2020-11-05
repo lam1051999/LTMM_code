@@ -1,6 +1,3 @@
-import math
-
-
 def inv_number_modulo(a, m):
     if a < 0:
         a = a % m
