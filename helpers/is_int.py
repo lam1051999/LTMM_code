@@ -1,6 +1,6 @@
-def is_int(str):
+def is_int(s):
     try:
-        int(str)
+        int(s)
     except ValueError:
         return False
     return True
