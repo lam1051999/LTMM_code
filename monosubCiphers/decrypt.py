@@ -4,7 +4,6 @@ sys.path.append("..")
 
 
 def decrypt(input_str):
-    input_str = input_str.replace(" ", "")
     output_str = ""
     reversed_dict = {}
     for (key, value) in charactermap.MONOSUB_DICT.items():

@@ -4,7 +4,6 @@ sys.path.append("..")
 
 
 def encrypt(input_str, key):
-    input_str = input_str.replace(" ", "")
     input_list = []
     output_str = ""
     for i in input_str:

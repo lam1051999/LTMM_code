@@ -5,7 +5,6 @@ sys.path.append("..")
 
 
 def decrypt(input_str, key):
-    input_str = input_str.replace(" ", "")
     input_list = []
     output_list = []
     output_str = ""

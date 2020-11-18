@@ -1,13 +1,13 @@
-from autokeyCiphers.encrypt import encrypt
-from autokeyCiphers.decrypt import decrypt
+import autokeyCiphers.encrypt as encrypt
+import autokeyCiphers.decrypt as decrypt
+import helpers.get_input as get_input
 
+prompt, input_str = get_input.get_input()
+key = 'N'  # change this parameter
 
-print('Enter an example plaintext: ', end='')
-plaintext = str(input()).upper()
-key = 'N' # change this parameter
-
-ciphertext = encrypt(plaintext, key)
-print('Ciphertext:', ciphertext)
-
-plaintext = decrypt(ciphertext, key)
-print('Plaintext:', plaintext)
+if prompt == 0:
+    print("Encrypted string (cipher text) (with key=" +
+          str(key) + "): ", encrypt.encrypt(input_str, key))
+else:
+    print("Decrypted string (plain text) (with key=" +
+          str(key) + "): ", decrypt.decrypt(input_str, key))

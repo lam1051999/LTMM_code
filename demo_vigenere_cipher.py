@@ -1,13 +1,15 @@
-from vigenereCiphers.encrypt import encrypt
-from vigenereCiphers.decrypt import decrypt
-from vigenereCiphers.generate_key import generateKey
+import vigenereCiphers.decrypt as decrypt
+import vigenereCiphers.encrypt as encrypt
+import helpers.get_input as get_input
+import vigenereCiphers.generate_key as generate_key
 
+prompt, input_str = get_input.get_input()
+keyword = "PYTHON"
+key = generate_key.generateKey(input_str, keyword)
 
-if __name__ == "__main__": 
-    plaintext = "MOINGAYMOTCAUCHUYEN" # Change here
-    keyword = "PYTHON" # Change here
-    key = generateKey(plaintext, keyword) 
-    cipher_text = encrypt(plaintext,key) 
-    print("Ciphertext:", cipher_text) 
-    print("Plaintext:",  
-           decrypt(cipher_text, key))
+if prompt == 0:
+    print("Encrypted string (cipher text) (with key=" +
+          str(key) + "): ", encrypt.encrypt(input_str, key))
+else:
+    print("Decrypted string (plain text) (with key=" +
+          str(key) + "): ", decrypt.decrypt(input_str, key))

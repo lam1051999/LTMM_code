@@ -27,4 +27,4 @@ def get_input():
         else:
             break
 
-    return int(prompt), input_str
+    return int(prompt), input_str.replace(" ", "")

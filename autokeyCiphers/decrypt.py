@@ -1,4 +1,5 @@
 def decrypt(ciphertext, key):
+    ciphertext = ciphertext.upper()
     key_num = alpha_to_num[key]
     ciphertext_num = []
     for c in ciphertext:
@@ -16,8 +17,9 @@ def decrypt(ciphertext, key):
 
     return ''.join(plaintext)
 
+
 alpha_characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
-                        'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+                    'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 num_to_alpha = {}
 alpha_to_num = {}
