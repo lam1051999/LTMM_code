@@ -15,8 +15,8 @@ def inv_number_modulo(a, m):
         t = t1 - q*t2
         t1 = t2
         t2 = t
-
+        
     if r1 == 1:
-        return t1
+        return t1 if t1 >= 0 else (t1 + 26)
     else:
         raise Exception("Cannot find the inverse of {} mod {}".format(a, m))
